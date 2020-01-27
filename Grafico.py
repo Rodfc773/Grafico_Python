@@ -12,7 +12,7 @@ plt.show()
 plt.style.use('dark_background')
 labels = dataset.data
 plt.subplot(1,2,1)
-plt.plot(dataset.data[:10], dataset.consumo[:10],'dark red')
+plt.plot(dataset.data[:10], dataset.consumo[:10],'green')
 plt.xticks(dataset.data[:10],labels, rotation = 'vertical')
 plt.xlabel('datas')
 plt.ylabel('consumo')

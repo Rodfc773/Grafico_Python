@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-dataset = pd.read_csv("a11_CONSUMO.csv")
+dataset = pd.read_csv("Consumo.csv")
 
 #Gera um boxplot dos dados
 dataset.boxplot()
@@ -9,9 +9,10 @@ plt.title('Boxplot')
 plt.show()
 
 #Gera um gráfico com os 10 primeiros dados do arquivo
+plt.style.use('dark_background')
 labels = dataset.data
 plt.subplot(1,2,1)
-plt.plot(dataset.data[:10], dataset.consumo[:10],'black')
+plt.plot(dataset.data[:10], dataset.consumo[:10],'dark red')
 plt.xticks(dataset.data[:10],labels, rotation = 'vertical')
 plt.xlabel('datas')
 plt.ylabel('consumo')
@@ -22,7 +23,7 @@ plt.title('Consumo de 1984')
 
 #Gera o gráfico dos ultimos 10 dados
 plt.subplot(1,2,2)
-plt.plot(dataset.data[145:], dataset.consumo[145:], 'yellow')
+plt.plot(dataset.data[145:], dataset.consumo[145:], 'green')
 plt.xticks(dataset.data[145:154], dataset.data, rotation = 'vertical')
 plt.xlabel('datas')
 plt.ylabel('Consumo')

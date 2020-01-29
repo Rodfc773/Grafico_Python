@@ -6,6 +6,7 @@ dataset = pd.read_csv("Consumo.csv")
 #Gera um boxplot dos dados
 dataset.boxplot()
 plt.title('Boxplot')
+plt.savefig('Boxplot.jpg', format ="jpg")
 plt.show()
 
 #Gera um gráfico com os 10 primeiros dados do arquivo
@@ -23,13 +24,15 @@ plt.title('Consumo de 1984')
 
 #Gera o gráfico dos ultimos 10 dados
 plt.subplot(1,2,2)
-plt.plot(dataset.data[145:], dataset.consumo[145:], 'green')
-plt.xticks(dataset.data[145:154], dataset.data, rotation = 'vertical')
+plt.plot(dataset.data[143:], dataset.consumo[143:], 'green')
+plt.xticks(dataset.data[143:], dataset.data, rotation = 'vertical')
 plt.xlabel('datas')
 plt.ylabel('Consumo')
 plt.grid(True)
 plt.title('Consumo de 1996')
+plt.savefig('os 10 primeiros e os 10 ultimos.jpg', format = 'jpg')
 plt.show()
+
 
 #Gera o gráfico dos 30 primeiros dados
 plt.plot(dataset.data[:30], dataset.consumo[:30], 'green')
@@ -38,5 +41,5 @@ plt.xlabel('datas')
 plt.ylabel('Quantidade consumida')
 plt.grid(True)
 plt.title('Consumo entre os anos de 1984 e 1986')
+plt.savefig('Os 30 primeiros dados.jpg', format = 'jpg')
 plt.show()
-   
